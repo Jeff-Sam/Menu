@@ -1,10 +1,17 @@
+   * {
+    box-sizing: border-box;
+}
+
 body {background-color: #141414;
 	font-size: 100%;
 	text-align: center;
+  color: white;
 	
 }
 
-
+p {
+  color: green;
+}
 
 a {
 	background-color:#141414;
@@ -14,8 +21,9 @@ a {
 }
 
 ul {list-style-type: none;
-	margin: 0;
-	padding: 300;
+	margin: 0px;
+	padding-right: 50px;
+  padding-left: 46px;
 	overflow: show;
 	background-color: #141414;
 	text-align: center;
@@ -27,7 +35,7 @@ ul {list-style-type: none;
   }
 
   to {
-    opacity: 1;
+    opacity: 1;   
   }
 }
 
@@ -39,10 +47,9 @@ li a, .fadein {
 
 }
 
-li {float: center;
-}
 
-li a, .dropbtn {
+
+#lione, #litwo, #lithree, #aone, #atwo, #athree, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -50,57 +57,111 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-	background-color: #01ff6b;
+
+@-webkit-keyframes SignGlow {
+
+  0% {
+    color: black;
+  }
+
+  50% {
+        color: #fc62f4;
+    text-shadow: 0 0 7px #fc62f4 , 0 0 50px #fc62f4
+  }
+
+  100% {
+            color: black;
+  }
+
+  150% {
+            color: #fc62f4;
+    text-shadow: 0 0 7px #fc62f4 , 0 0 50px #fc62f4
+  }
+
+  200% {
+            color: black;
+  }
+
+  230% {
+            color: #fc62f4;
+    text-shadow: 0 0 7px #fc62f4 , 0 0 50px #fc62f4
+  }
 }
 
-@-webkit-keyframes TextChange {
-	0% {
-		color: white;
-	}
-
-	20%{
-		color: yellow;
-	}
-
-	40%{
-		color: red;
-	}
-
-	60%{
-		color:green ;
-	}
-
-	80%{
-		color:blue;
-	}
-
-	100%{
-		color:white;
-	}
+#menu, #welcome {
+  list-style: horizontal;
+  color: black;
+  font-family: 'Bungee Shade', cursive;
+  letter-spacing: 10px;
+          color: #fc62f4;
+    text-shadow: 0 0 7px #fc62f4 , 0 0 50px #fc62f4;
+    
+    transform: translate (-50%, -50%);
+    display: flex;
 }
 
-h1, .TextChange {
-	-webkit-animation-name: TextChange;
-	-webkit-animation-duration: 10s;
-	-webkit-transition: color 10s ease-in;
-	animation-iteration-count: infinite
+#menu{
+  font-size: 5em;
 }
 
-h1 {
-	font-family: 'Monoton', cursive;
+#welcome {
+  font-size: 3em;
+  text-align: center;
+
 }
 
-#breakfast, #sandwhiches, #dinner {
+#n {
+  animation: SignGlow .78s linear infinite;
+}
+
+#breakfast, #sandwiches, #dinner, #drinks, #desserts, #salads {
 	position: relative;
 	display: inline-block;
 	border: solid;
-	border-width: 4px
-	border-color: red; 
+	border-width: 4px;
+	border-color: red;
+  float: left;
+  height: 54%;
+  margin: 12px;
+}
+
+#drinks {
+  font-size: 150%;
 }
 
 #about {
   color: white;
+}
+
+
+
+#menubody {
+  margin: auto;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
 }
 
 #wrap {
@@ -164,3 +225,73 @@ input[type="submit"] {
   transition: opacity .4s ease;
 }
 
+@media only screen and (max-width: 767px){
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1007px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1008px) {
+    .col-w-1 {width: 8.33%;}
+    .col-w-2 {width: 16.66%;}
+    .col-w-3 {width: 25%;}
+    .col-w-4 {width: 33.33%;}
+    .col-w-5 {width: 41.66%;}
+    .col-w-6 {width: 50%;}
+    .col-w-7 {width: 58.33%;}
+    .col-w-8 {width: 66.66%;}
+    .col-w-9 {width: 75%;}
+    .col-w-10 {width: 83.33%;}
+    .col-w-11 {width: 91.66%;}
+    .col-w-12 {width: 100%;}
+
+}
+
+#menu-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #141414;
+}
+
+#lione, #litwo, #lithree, #aone, #atwo, #athree {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+#lia:hover {
+  background-color: #141414;
+}
+
+
+em {
+  color: pink;
+}
