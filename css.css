@@ -276,6 +276,7 @@ input[type="submit"] {
     padding: 0;
     overflow: hidden;
     background-color: #141414;
+    display: absolute;
 }
 
 #lione, #litwo, #lithree, #aone, #atwo, #athree {
@@ -285,6 +286,7 @@ color: white;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
+display: fixed;
 }
 
 #lia:hover {
